@@ -1,0 +1,44 @@
+@import '../../assets/styles/variables'
+
+.task-edit__controls-bar
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  margin-top: 14px
+  gap: 4px
+.task-edit__options
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  gap: 10px
+  margin-right: auto
+  .button--only-icon.button--active
+    background-color: transparent !important
+.task-edit__tag
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  gap: 5px
+.task-edit__category
+  margin-bottom: 10px
+.task-edit__deadline
+  margin-top: 10px
+.task-edit__priority
+  margin-top: 10px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  font-size: 12px
+  gap: 8px
+  text-transform: uppercase
+.tags-search
+  margin-bottom: 10px
+.priority
+  &--urgent
+    color: #f50100
+  &--high
+    color: #ffcc02
+  &--normal
+    color: #6fddff
+  &--low
+    color: #45b488

@@ -1,0 +1,24 @@
+@import '../../assets/styles/variables'
+
+.search
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 8px
+  border-right: 1px solid $light-gray
+  padding-right: 6px
+.search__field
+  max-width: 200px
+  width: 100%
+  font-weight: 300
+  font-size: 13px
+.search__button
+  padding: 4px 6px
+  display: flex
+  align-items: center
+  border-radius: 5px
+  transition: .2s
+  &:hover
+    background-color: #EAE9EB
+  &--settings
+    height: min-content

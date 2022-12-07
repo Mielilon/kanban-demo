@@ -1,0 +1,39 @@
+@import '../../../assets/styles/variables'
+
+.react-calendar 
+  border: none
+  font-family: "Rubik"
+  button
+    transition: .3s
+.react-calendar__tile--active, 
+.react-calendar__tile--active:enabled:hover, 
+.react-calendar__tile--active:enabled:focus,
+.react-calendar__tile--hasActive
+  color: #fff !important
+  background: $main-color !important
+.react-calendar__tile--now,
+.react-calendar__tile--now:enabled:hover, 
+.react-calendar__tile--now:enabled:focus
+  background: $gray
+  color: #fff !important
+  color: $black
+.react-calendar__month-view__days__day--weekend
+  color:#f50100
+.react-calendar__navigation, 
+.react-calendar__year-view__months,
+.react-calendar__decade-view__years,
+.react-calendar__month-view__days
+  border-radius: 5px
+  overflow: hidden
+.react-calendar__year-view .react-calendar__tile, 
+.react-calendar__decade-view .react-calendar__tile, 
+.react-calendar__century-view .react-calendar__tile
+  padding: 10px
+.react-calendar__year-view__months__month, 
+.react-calendar__decade-view__years__year
+  flex-basis: calc(33% - 5px) !important
+.react-calendar__decade-view__years,
+.react-calendar__year-view__months
+  justify-content: space-between
+.react-calendar button:disabled
+  cursor: default

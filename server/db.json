@@ -1,0 +1,198 @@
+{
+  "tasks": [
+    {
+      "status": 3,
+      "category": "Recruitment",
+      "title": "Test!",
+      "content": "",
+      "order": 0,
+      "startDate": "03/11/2022",
+      "dueDate": "26/11/2022",
+      "priority": "high",
+      "tags": [],
+      "board": 5,
+      "id": 1
+    },
+    {
+      "status": 1,
+      "category": "Other",
+      "title": "LKKK",
+      "content": "",
+      "order": 0,
+      "startDate": "",
+      "dueDate": "",
+      "priority": "none",
+      "tags": [],
+      "board": 1,
+      "id": 2
+    },
+    {
+      "status": 1,
+      "category": "Other",
+      "title": "Новый тест",
+      "content": "",
+      "order": 0,
+      "startDate": "",
+      "dueDate": "",
+      "priority": "none",
+      "tags": [],
+      "board": 1,
+      "id": 3
+    },
+    {
+      "status": 1,
+      "category": "Other",
+      "title": "ровлапрыролвдап",
+      "content": "",
+      "order": 0,
+      "startDate": "",
+      "dueDate": "",
+      "priority": "none",
+      "tags": [],
+      "board": 2,
+      "id": 4
+    },
+    {
+      "status": 3,
+      "category": "Other",
+      "title": "New task",
+      "content": "",
+      "order": 0,
+      "startDate": "",
+      "dueDate": "",
+      "priority": "none",
+      "tags": [],
+      "board": 1,
+      "id": 5
+    },
+    {
+      "status": 2,
+      "category": "Finance",
+      "title": "Задачу",
+      "content": "",
+      "order": 0,
+      "startDate": "17/11/2022",
+      "dueDate": "",
+      "priority": "low",
+      "tags": [],
+      "board": 7,
+      "id": 6
+    },
+    {
+      "status": 2,
+      "category": "Testing",
+      "title": "New task",
+      "content": "",
+      "order": 0,
+      "startDate": "26/11/2022",
+      "dueDate": "04/12/2022",
+      "priority": "normal",
+      "tags": [],
+      "board": 1,
+      "id": 7
+    }
+  ],
+  "boards": [
+    {
+      "name": "Hello",
+      "id": 1,
+      "priority": "normal"
+    },
+    {
+      "name": "Just do it",
+      "id": 2,
+      "priority": "low"
+    },
+    {
+      "name": "Reeee",
+      "id": 3,
+      "priority": "low"
+    },
+    {
+      "name": "New board",
+      "priority": "high",
+      "id": 4
+    },
+    {
+      "name": "Hello",
+      "priority": "none",
+      "id": 5
+    },
+    {
+      "name": "New board",
+      "status": "#BABBBD",
+      "id": 6
+    },
+    {
+      "name": "Доска",
+      "status": "#BABBBD",
+      "id": 7
+    }
+  ],
+  "statuses": [
+    {
+      "name": "To do",
+      "id": 1
+    },
+    {
+      "name": "In progress",
+      "id": 2
+    },
+    {
+      "name": "Complete",
+      "id": 3
+    }
+  ],
+  "tags": [
+    {
+      "name": "Facebook",
+      "id": 1
+    },
+    {
+      "name": "Twitter",
+      "id": 2
+    },
+    {
+      "name": "Instagram",
+      "id": 3
+    },
+    {
+      "name": "LinkedIn",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "name": "Development",
+      "id": 1
+    },
+    {
+      "name": "Management",
+      "id": 2
+    },
+    {
+      "name": "Design",
+      "id": 3
+    },
+    {
+      "name": "Testing",
+      "id": 4
+    },
+    {
+      "name": "Finance",
+      "id": 5
+    },
+    {
+      "name": "Recruitment",
+      "id": 6
+    },
+    {
+      "name": "Administration",
+      "id": 7
+    },
+    {
+      "name": "Research",
+      "id": 8
+    }
+  ]
+}

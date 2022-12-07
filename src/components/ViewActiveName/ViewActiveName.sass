@@ -1,0 +1,53 @@
+@import '../../assets/styles/variables'
+
+.view-active-name
+  display: flex
+  align-items: center
+  gap: 10px
+  position: relative
+  white-space: nowrap
+.view-active-name__priority
+  height: 30px
+  width: 30px
+  background-color: $light-gray
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 5px
+  &::before
+    content: ''
+    height: 15px
+    width: 15px
+    border: 2px solid $gray
+    position: absolute
+    border-radius: 50%
+  &--urgent
+    background-color: #f7a6a6 !important
+    &::before
+      border-color: #f50100
+  &--high
+    background-color: #f8e7a3 !important
+    &::before
+      border-color: #ffcc02
+  &--normal
+    background-color: #cdedf6 !important
+    &::before
+      border-color: #6fddff
+  &--low
+    background-color: #b5f3da !important
+    &::before
+      border-color: #45b488
+.view-active-name__name
+  cursor: default
+  font-weight: 500
+  max-width: 70px
+  width: 70px
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+.view-active-name__option
+  padding: 6px 0
+  background-color: transparent
+  &:hover
+    background-color: $white

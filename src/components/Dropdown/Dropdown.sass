@@ -1,0 +1,82 @@
+@import '../../assets/styles/variables'
+
+.dropdown
+  position: relative
+.dropdown[open]
+  .dropdown__value
+    border-color: $gray
+.dropdown-list 
+  white-space: nowrap
+  display: flex
+  flex-direction: column
+  padding: 10px
+  font-size: 13px
+  max-height: 200px
+  overflow-y: auto
+  top: 34px
+  scrollbar-width: thin
+  &::-webkit-scrollbar
+    width: 0
+  &--full-popup
+    padding: 0
+    margin: 0 -8px -6px
+    .dropdown-item
+      height: 28px
+.dropdown-item
+  height: 32px
+  display: flex
+  align-items: center
+  padding: 8px 30px 8px 8px
+  cursor: pointer
+  transition: .1s
+  border-radius: 5px
+  gap: 5px
+  &:hover
+    background-color: #f0f1f3
+  &.active
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      right: 8px
+      height: 14px
+      width: 14px
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.52185 14.8857L1.11656 8.51453C1.07962 8.4778 1.05031 8.43413 1.0303 8.38602C1.0103 8.33792 1 8.28634 1 8.23425C1 8.18215 1.0103 8.13057 1.0303 8.08247C1.05031 8.03437 1.07962 7.99069 1.11656 7.95396L2.7336 6.33512C2.88812 6.1806 3.13786 6.1806 3.29238 6.33512L7.50927 10.5269C7.66379 10.6814 7.91533 10.6796 8.06984 10.5251L17.3876 1.11746C17.5421 0.961147 17.7937 0.961147 17.95 1.11566L19.5688 2.7345C19.7233 2.88902 19.7233 3.13876 19.5706 3.29328L9.41918 13.5364L9.42097 13.5381L8.08242 14.8839C7.9279 15.0384 7.67636 15.0384 7.52185 14.8857Z' fill='%236465E5' stroke='%236465E5' stroke-miterlimit='10'/%3E%3C/svg%3E")
+.dropdown-item__status
+  color: $dark-gray
+.dropdown__value 
+  background-color: $white
+  border: 1px solid $light-gray
+  border-radius: 5px
+  height: 34px
+  padding: 4px 12px
+  padding-right: 40px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  cursor: pointer
+  transition: .1s
+  white-space: nowrap
+  font-size: 14px
+  user-select: none
+  &::before
+    content: ''
+    position: absolute
+    height: 16px
+    width: 16px
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23505860'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-size: auto
+    background-position: 50% 55%
+    right: 8px
+  &:hover
+    border-color: $gray
+.dropdown-item__icon
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  width: 14px

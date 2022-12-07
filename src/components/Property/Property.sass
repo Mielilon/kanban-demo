@@ -1,0 +1,75 @@
+@import '../../assets/styles/variables'
+.property
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  &--active
+    .property__selected
+      background: #F7F8F5
+    .property-wrapper
+      box-shadow: 0px 2px 12px 0px #00000040
+.property-position
+  position: relative
+  width: 100%
+  top: 0
+  height: 34px
+.property-wrapper
+  flex-grow: 1
+  border: 1px solid #E6E6E6
+  border-radius: 5px
+  position: absolute
+  overflow: hidden
+  width: 100%
+  &.active
+    .property__dropdown-wrapper
+      display: block
+.property__selected
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+  gap: 6px
+  padding: 6px 10px
+  min-height: 34px
+.property__title
+  width: 110px
+  font-size: 14px
+  color: $dark-gray
+  display: flex
+  align-items: center
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  gap: 6px
+  white-space: nowrap
+.property__dropdown-wrapper
+  padding: 12px 10px
+  top: 34px
+  display: none
+.property__dropdown-title
+  font-size: 12px
+  text-transform: uppercase
+  color: $dark-gray
+.property__dropdown-item
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 4px
+  transition: .3s
+  .button--only-icon
+    padding: 4px
+  &:hover
+    background: #F7F8F5
+.property__dropdown
+  margin-top: 8px
+  display: flex
+  flex-direction: column
+.property__dropdown-button
+  flex-grow: 1
+  display: flex
+  justify-content: flex-start
+  cursor: pointer
+.property__field
+  flex-basis: 20%
+  flex-grow: 1
+  width: 100%

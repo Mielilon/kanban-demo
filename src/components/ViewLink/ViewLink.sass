@@ -1,0 +1,54 @@
+@import '../../assets/styles/variables'
+
+.view-link 
+  line-height: 150%
+  position: relative
+  font-size: 14px
+  margin-left: 6px
+  display: flex
+  align-items: center
+  transition: .2s
+.view-item-priority
+  content: ''
+  height: 10px
+  width: 10px
+  left: 0
+  border: 2px solid $gray
+  border-radius: 50%
+  &--urgent
+    border-color: #f50100
+  &--high
+    border-color: #ffcc02
+  &--normal
+    border-color: #6fddff
+  &--low
+    border-color: #45b488
+.view-list__item 
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  position: relative
+  margin: 0
+  margin-bottom: 20px
+  &::after
+    content: ''
+    position: absolute
+    height: 3px
+    width: 0
+    right: -9px
+    bottom: -15px
+    background-color: $main-color
+    border-radius: 5px 5px 0 0
+    transition: .2s
+  &:hover
+    &::after
+      width: 100%
+      left: 9px
+      right: auto
+  &.active
+    .view-link
+      cursor: default
+    &::after
+      width: 100%
+  &:last-child::after
+    display: none

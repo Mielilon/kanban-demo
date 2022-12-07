@@ -1,0 +1,40 @@
+@import '../../assets/styles/variables'
+  
+.container
+  width: 100%
+  height: auto
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  padding: 0 20px
+.content 
+  width: 100%
+
+.flex
+  display: flex
+  &--column
+    flex-direction: column
+  &--align-center
+    align-items: center
+  &--align-start
+    align-items: flex-start
+  &--justify-between
+    justify-content: space-between
+  &--justify-start
+    justify-content: flex-start
+
+
+.gap1
+  gap: 15px
+.gap2
+  gap: 30px
+.grid
+  display: grid
+
+.bar
+  background: $white
+  border-bottom: 1px solid $light-gray
+  &--controls
+    padding: 10px 0
+  &--options
+    padding: 4px 0

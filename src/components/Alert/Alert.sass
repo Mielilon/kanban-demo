@@ -1,0 +1,18 @@
+.alert
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 15px
+  padding: 10px 15px 
+  width: 260px
+  border-radius: 0 5px 5px 0
+  position: relative
+  .button
+    background-color: transparent
+  &--success
+    background-color: #cbffea
+    color: #45b488
+  &--hidden
+    transition: all 250ms 3000ms
+    transform: translateX(-9px)
+    opacity: 0

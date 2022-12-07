@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables'
+.view-list
+  display: flex
+  align-items: center
+  gap: 16px
+  max-width: 100%
+  overflow: auto
+  white-space: nowrap
+  scrollbar-width: none
+  margin-bottom: -20px
+.view-list::-webkit-scrollbar
+  width: 0
+.view-list__item 
+  padding-left: 16px
+  border-left: 1px solid $light-gray
+.view-list__view-add-button
+  margin-left: -6px
+
+.view-add-button
+  font-size: 14px
+  position: relative
+  padding-left: 22px
+  padding-right: 10px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  &::before, &::after
+    content: ''
+    position: absolute
+    height: 2px
+    width: 10px
+    background-color: $gray
+    border-radius: 5px
+    left: 8px
+    transition: .2s
+  &::before
+    transform: rotate(0deg)
+  &::after
+    transform: rotate(90deg)
+  &:hover
+    &::before, &::after
+      background-color: #7E818C
+    

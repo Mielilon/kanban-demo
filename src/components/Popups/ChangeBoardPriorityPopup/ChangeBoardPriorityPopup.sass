@@ -1,0 +1,24 @@
+.priority-color
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  padding-left: 34px
+  text-transform: uppercase
+  padding-right: 40px
+  &::before
+    content: ''
+    background-color: #BABBBD
+    height: 18px
+    width: 18px
+    position: absolute
+    left: 6px
+    border-radius: 5px
+  &--urgent::before
+    background-color: #f50100
+  &--high::before
+    background-color: #ffcc02
+  &--normal::before
+    background-color: #6fddff
+  &--low::before
+    background-color: #45b488
