@@ -1,9 +1,18 @@
-import { useState, useEffect, useRef } from 'react';
+import {
+  useState, useEffect, useRef, MouseEvent,
+} from 'react';
 
-const useOutsideClick = () => {
+/**
+ * Хук закрытия попапа нажатием за его пределы.
+ *
+ * @returns массив из трех значений: ref-а для установки ссылки на DOM-элемент попапа,
+ * функции для установки состояния видимости попапа, булевого значение видимости
+ */
+const useOutsideClick = (): [React.MutableRefObject<HTMLDivElement | null>,
+  (e: MouseEvent) => void, boolean] => {
   const [flag, setFlag] = useState(false);
 
-  const popupWrapperRef = useRef<HTMLLIElement>(null);
+  const popupWrapperRef = useRef<null | HTMLDivElement>(null);
 
   const changeFlag = (e: Event) => {
     const exceptions = [
@@ -25,7 +34,7 @@ const useOutsideClick = () => {
     return () => document.removeEventListener('click', changeFlag);
   }, [flag]);
 
-  const changeVisibility = (e) => {
+  const changeVisibility = (e: MouseEvent) => {
     e.stopPropagation();
     setFlag((prev) => !prev);
   };

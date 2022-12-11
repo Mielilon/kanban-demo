@@ -2,131 +2,90 @@
   "tasks": [
     {
       "status": 3,
-      "category": "Recruitment",
-      "title": "Test!",
+      "category": "Testing",
+      "title": "Fix color of project buttons",
       "content": "",
       "order": 0,
-      "startDate": "03/11/2022",
-      "dueDate": "26/11/2022",
-      "priority": "high",
-      "tags": [],
-      "board": 5,
+      "startDate": "07/12/2022",
+      "dueDate": "",
+      "priority": "normal",
+      "tags": [
+        {
+          "name": "Instagram",
+          "color": "red"
+        },
+        {
+          "name": "Facebook"
+        }
+      ],
+      "board": 1,
       "id": 1
-    },
-    {
-      "status": 1,
-      "category": "Other",
-      "title": "LKKK",
-      "content": "",
-      "order": 0,
-      "startDate": "",
-      "dueDate": "",
-      "priority": "none",
-      "tags": [],
-      "board": 1,
-      "id": 2
-    },
-    {
-      "status": 1,
-      "category": "Other",
-      "title": "Новый тест",
-      "content": "",
-      "order": 0,
-      "startDate": "",
-      "dueDate": "",
-      "priority": "none",
-      "tags": [],
-      "board": 1,
-      "id": 3
-    },
-    {
-      "status": 1,
-      "category": "Other",
-      "title": "ровлапрыролвдап",
-      "content": "",
-      "order": 0,
-      "startDate": "",
-      "dueDate": "",
-      "priority": "none",
-      "tags": [],
-      "board": 2,
-      "id": 4
-    },
-    {
-      "status": 3,
-      "category": "Other",
-      "title": "New task",
-      "content": "",
-      "order": 0,
-      "startDate": "",
-      "dueDate": "",
-      "priority": "none",
-      "tags": [],
-      "board": 1,
-      "id": 5
     },
     {
       "status": 2,
       "category": "Finance",
-      "title": "Задачу",
+      "title": "Create a Netflix with the possibility of joint viewing.",
       "content": "",
       "order": 0,
-      "startDate": "17/11/2022",
-      "dueDate": "",
-      "priority": "low",
-      "tags": [],
-      "board": 7,
-      "id": 6
+      "startDate": "07/12/2022",
+      "dueDate": "24/12/2022",
+      "priority": "urgent",
+      "tags": [
+        {
+          "name": "Instagram",
+          "color": "red"
+        },
+        {
+          "name": "LinkedIn",
+          "color": "gray"
+        },
+        {
+          "name": "Facebook"
+        },
+        {
+          "name": "Telegram",
+          "color": "yellow"
+        }
+      ],
+      "board": 2,
+      "id": 2
     },
     {
-      "status": 2,
-      "category": "Testing",
-      "title": "New task",
+      "status": 3,
+      "category": "Recruitment",
+      "title": "New Task",
       "content": "",
       "order": 0,
-      "startDate": "26/11/2022",
-      "dueDate": "04/12/2022",
-      "priority": "normal",
+      "startDate": "23/12/2022",
+      "dueDate": "29/12/2022",
+      "priority": "high",
       "tags": [],
       "board": 1,
-      "id": 7
+      "id": 3
     }
   ],
   "boards": [
     {
-      "name": "Hello",
+      "name": "First Board",
       "id": 1,
-      "priority": "normal"
-    },
-    {
-      "name": "Just do it",
-      "id": 2,
       "priority": "low"
     },
     {
-      "name": "Reeee",
+      "name": "Second Board",
+      "status": "#BABBBD",
+      "id": 2,
+      "priority": "urgent"
+    },
+    {
+      "name": "New Board",
+      "status": "#BABBBD",
       "id": 3,
       "priority": "low"
     },
     {
       "name": "New board",
-      "priority": "high",
+      "status": "#BABBBD",
       "id": 4
-    },
-    {
-      "name": "Hello",
-      "priority": "none",
-      "id": 5
-    },
-    {
-      "name": "New board",
-      "status": "#BABBBD",
-      "id": 6
-    },
-    {
-      "name": "Доска",
-      "status": "#BABBBD",
-      "id": 7
     }
   ],
   "statuses": [
