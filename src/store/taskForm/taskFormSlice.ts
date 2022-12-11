@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const taskFormSlice = createSlice({
+export interface TaskFormSliceState {
+  groupId: null | number
+}
+
+const taskFormSlice = createSlice<TaskFormSliceState, any>({
   name: 'taskForm',
   initialState: {
     groupId: null,

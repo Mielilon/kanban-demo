@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import AddTaskForm from '../AddTaskForm/AddTaskForm';
@@ -7,7 +7,8 @@ import Task from '../Task/Task';
 import './TaskGroup.sass';
 import Button from '../Button/Button';
 import { TaskType } from '../../types/task';
-import { changeGroupId } from '../../store/taskForm/taskFormSlice';
+import { changeGroupId, TaskFormSliceState } from '../../store/taskForm/taskFormSlice';
+import { TypeRootState } from '../../store';
 
 type TaskGroupProps = {
   taskGroup: {
@@ -17,22 +18,34 @@ type TaskGroupProps = {
   },
   setDraggingTaskId: React.Dispatch<React.SetStateAction<null | number>>,
   onTaskGroupDrop: React.DragEventHandler<HTMLDivElement> | undefined,
-}
+};
 
+/**
+ * Компонент группы задач.
+ *
+ * @param props на данный момент формируются только в компоненте TaskBoard
+ * @param props.taskGroup сформированные данные группы
+ * @param props.setDraggingTaskId функция добавления в состояние id перетаскиваемой карточки
+ * @param props.onTaskGroupDrop функция для изменения статуса карточки
+ * @returns компонент группы задач
+ */
 function TaskGroup({
   taskGroup, setDraggingTaskId, onTaskGroupDrop,
 }: TaskGroupProps): React.ReactElement {
-  const { board: activeBoardId } = useParams();
-  const [currentGroup, setCurrentGroup] = useState<Element | null>(null);
-  const activeGroupId = useSelector((state) => state.taskForm);
   const dispatch = useDispatch();
+
+  const { board: activeBoardId } = useParams();
+
+  /**
+   * activeGroupId принимает объект с id активной группы
+   */
+  const activeGroupId = useSelector<TypeRootState>((state) => state.taskForm) as TaskFormSliceState;
 
   const dragOverHandler = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    setCurrentGroup((e.target as HTMLElement).closest('.tasks-wrapper'));
   };
-  const { name: title, tasks: taskListData, id } = taskGroup;
 
+  const { name: title, tasks: taskListData, id } = taskGroup;
   const tasks = taskListData.filter((task) => task.board === Number(activeBoardId));
 
   return (
@@ -56,7 +69,7 @@ function TaskGroup({
           />
         ))}
         { activeGroupId.groupId === id ? <AddTaskForm groupId={id} /> : (
-          <Button className="button--uppercase button--card" iconType="plus" onClick={() => dispatch(changeGroupId(id))}>New Task</Button>
+          <Button className="button--uppercase button--card" iconType="plus" onClick={() => dispatch(changeGroupId && changeGroupId(id))}>New Task</Button>
         ) }
       </div>
     </div>

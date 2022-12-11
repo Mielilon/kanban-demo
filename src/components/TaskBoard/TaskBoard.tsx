@@ -15,7 +15,18 @@ const contentLayout = 'flex flex--align-start gap2';
 type TaskBoardProps = {
   taskListData: TaskType[],
   statusesData: StatusType[],
-}
+};
+
+/**
+ * Компонент доски задач.
+ * Отвечает за отображение доски задач, а также за формирование
+ * данных для групп и установку состояния перетаскиваемой карточки.
+ *
+ * @param props пропсы компонента
+ * @param props.taskListData данные задач, приходят с сервера
+ * @param props.buttonIconSize данные статусов/групп, приходят с сервера
+ * @returns компонент доски задач
+ */
 
 function TaskBoard({
   taskListData: tasks,
@@ -58,7 +69,13 @@ function TaskBoard({
         />
       ))}
       <div className="button-header-wrapper">
-        <Button iconType="plus" onClick={() => {}} className="button--header button--card button--uppercase card card--header">Add Status</Button>
+        <Button
+          iconType="plus"
+          onClick={() => {}}
+          className="button--header button--card button--uppercase card card--header"
+        >
+          Add Status
+        </Button>
       </div>
     </Container>
 
